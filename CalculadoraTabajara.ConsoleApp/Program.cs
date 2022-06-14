@@ -56,7 +56,7 @@ namespace CalculadoraTabajara.ConsoleApp
 
                     case "3": operacao = "Multiplição"; break;
 
-                    //case "4": operacao = "Divisão"; break;
+                    case "4": operacao = "Divisão"; break;
 
                     default:
                         break;
