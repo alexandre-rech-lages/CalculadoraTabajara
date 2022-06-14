@@ -1,0 +1,16 @@
+﻿Master Branch
+
+	Feature Branch: Modulo de Paciente
+
+		01 - Classe de Dominio
+		02 - Classe de validação do dominio
+		08 - Interface do Repositorio
+		03 - Repositorio 
+
+		04 - Controlador	
+		05 - Configuracao ToolBar
+		06 - User Control do Grid
+		07 - Formulario	
+
+		09 - Teste da classe de dominio
+		10 - Teste do Repositorio 
