@@ -37,6 +37,13 @@ namespace CalculadoraTabajara.ConsoleApp
                 if (opcao.Equals("s", StringComparison.OrdinalIgnoreCase))
                     break;
 
+                if (opcao != "1" && opcao != "2" && opcao != "3")
+                {
+                    Console.WriteLine("Por favor, digite uma opção válida!");
+                    Console.ReadLine();
+                    continue;
+                }
+
                 #endregion
 
                 #region Realizar Calculo
