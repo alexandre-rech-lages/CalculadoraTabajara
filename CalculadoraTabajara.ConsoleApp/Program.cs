@@ -8,7 +8,7 @@ namespace CalculadoraTabajara.ConsoleApp
         //1º Deve realizar operações de adição
         //2º Deve realizar operações de subtração
         //3º Deve realizar operações de multiplicação
-        //4º Deve realizar operações de multiplicação
+        //4º Deve realizar operações de divisão
 
         static void Main(string[] args)
         {
@@ -40,7 +40,7 @@ namespace CalculadoraTabajara.ConsoleApp
                 if (opcao.Equals("s", StringComparison.OrdinalIgnoreCase))
                     break;
 
-                if (opcao != "1" && opcao != "2" && opcao != "3")
+                if (opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4")
                 {
                     Console.WriteLine("Por favor, digite uma opção válida!");
                     Console.ReadLine();
@@ -91,7 +91,15 @@ namespace CalculadoraTabajara.ConsoleApp
 
                     case "3": resultado = primeiroNumero * segundoNumero; break;
 
-                    case "4": resultado = primeiroNumero / segundoNumero; break;
+                    case "4":
+                        {
+                            if (segundoNumero == 0)
+                            {
+                                Console.WriteLine("O segundo número não pode ser 0");
+                                continue;
+                            }
+                            resultado = primeiroNumero / segundoNumero; break;
+                        }
 
                     default:
                         break;
