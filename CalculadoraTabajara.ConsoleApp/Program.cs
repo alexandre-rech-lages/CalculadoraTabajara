@@ -8,10 +8,7 @@ namespace CalculadoraTabajara.ConsoleApp
         //1º Deve realizar operações de adição
         //2º Deve realizar operações de subtração
         //3º Deve realizar operações de multiplicação
-        //4º Deve realizar operações de divisão
-        //5º Deve visualizar operações realizadas
 
-        static List<string> calculos = new List<string>();
         static void Main(string[] args)
         {
             string opcao;
@@ -32,10 +29,6 @@ namespace CalculadoraTabajara.ConsoleApp
 
                 Console.WriteLine("Digite 3 para realizar operações de Multiplicação\n");
 
-                Console.WriteLine("Digite 4 para realizar operações de Divisão\n");
-
-                Console.WriteLine("Digite 5 para visualizar as operações feitas\n");
-
                 Console.WriteLine("Digite S para sair\n");
 
                 Console.Write("Opção: ");
@@ -43,23 +36,6 @@ namespace CalculadoraTabajara.ConsoleApp
 
                 if (opcao.Equals("s", StringComparison.OrdinalIgnoreCase))
                     break;
-
-                if (opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4" && opcao != "5")
-                {
-                    Console.WriteLine("Por favor, digite uma opção válida!");
-                    Console.ReadLine();
-                    continue;
-                }
-
-                if (opcao == "5")
-                {
-                    foreach (var c in calculos)
-                    {
-                        Console.WriteLine(c);
-                    }
-                    Console.ReadLine();
-                    continue;
-                }
 
                 #endregion
 
@@ -69,17 +45,15 @@ namespace CalculadoraTabajara.ConsoleApp
 
                 Console.WriteLine("Calculadora Tabajara\n");
 
-                string operacao = "", simbolo = "";
+                string operacao = "";
 
                 switch (opcao)
                 {
-                    case "1": operacao = "Adição"; simbolo = "+"; break;
+                    case "1": operacao = "Adição"; break;
 
-                    case "2": operacao = "Subtração"; simbolo = "-"; break;
+                    case "2": operacao = "Subtração"; break;
 
-                    case "3": operacao = "Multiplição"; simbolo = "*"; break;
-
-                    case "4": operacao = "Divisão"; simbolo = "/"; break;
+                    case "3": operacao = "Multiplição"; break;
 
                     default:
                         break;
@@ -105,8 +79,6 @@ namespace CalculadoraTabajara.ConsoleApp
 
                     case "3": resultado = primeiroNumero * segundoNumero; break;
 
-                    case "4": resultado = primeiroNumero / segundoNumero; break;
-
                     default:
                         break;
                 }
@@ -120,10 +92,6 @@ namespace CalculadoraTabajara.ConsoleApp
                 Console.WriteLine("Tela de Resultados\n");
 
                 Console.Write($"O resultado da operação da {operacao} é: {resultado}");
-
-                string descricaoCalculo = primeiroNumero + " " + simbolo + " " + segundoNumero + " = " + resultado; 
-                
-                calculos.Add(descricaoCalculo);
 
                 Console.WriteLine();
 
