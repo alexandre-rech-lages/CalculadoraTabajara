@@ -32,6 +32,8 @@ namespace CalculadoraTabajara.ConsoleApp
 
                 Console.WriteLine("Digite 4 para realizar operações de Divisão\n");
 
+                Console.WriteLine("Digite 5 para visualizar operações realizadas\n");
+
                 Console.WriteLine("Digite S para sair\n");
 
                 Console.Write("Opção: ");
